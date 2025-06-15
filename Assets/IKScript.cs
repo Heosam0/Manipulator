@@ -54,15 +54,9 @@ public class IKScript : MonoBehaviour
         angle *= CCDDamping;
 
 
-        if (axis == Axis.X)
-        {
-            targetAngle = Mathf.Clamp(targetAngle + angle, -90, 90);
-        }
-        else
-        {
-            targetAngle += angle;
-            targetAngle = Mathf.Repeat(targetAngle, 360f);
-        }
+        targetAngle = Mathf.Clamp(targetAngle + angle, -90, 90);
+
+             
 
       //
       //  Quaternion rotation = Quaternion.AngleAxis(angle, rotationAxis);
